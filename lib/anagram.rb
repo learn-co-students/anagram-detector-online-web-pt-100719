@@ -1,9 +1,6 @@
-require 'pry'
+
 # Your code goes here!
 class Anagram
-  
-  @@all = []
-  
   
   attr_accessor :word
   
@@ -12,10 +9,8 @@ class Anagram
   end 
   
   def match(array)
-    array.each do |word|
-      puts word.split(" ")
+    array.select do |words|
+     (@word.split("").sort) == (words.split("").sort)
     end 
   end
- # binding.pry
-  
-end 
+end
